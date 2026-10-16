@@ -1,10 +1,7 @@
-# 顯示名稱與簡介供使用者辨識用途，不引入外部工具依賴。
 interface:
   display_name: "backend-spec-planner"
-  short_description: "建立、逆向分析與審查後端規格，釐清領域責任、模組契約及批次行為"
-  # 啟動提示保留明確的 Skill 名稱，避免變成一般開發請求。
-  default_prompt: "請使用 $backend-spec-planner，依需求與專案證據建立或修訂正式規格；必要問題先在對話中一題一題釐清。"
+  short_description: "產出精煉後端規格，定義行為、責任、契約與驗收"
+  default_prompt: "請使用 $backend-spec-planner，依需求與專案證據產出精煉規格；必要問題逐題確認，設計按需展開。"
 
 policy:
-  # false 關閉隱含選用；仍可由使用者明確以 $backend-spec-planner 呼叫。
   allow_implicit_invocation: false

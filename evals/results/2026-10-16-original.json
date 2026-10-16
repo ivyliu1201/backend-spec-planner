@@ -1,0 +1,194 @@
+{
+  "project": "C:\\Users\\fanny\\AppData\\Local\\Temp\\backend-spec-redesign-q3smr92v\\implementation",
+  "changed": false,
+  "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "checks": [
+    {
+      "name": "mixed",
+      "passed": true,
+      "exit_code": 0,
+      "stdout": "{\"totalCount\": 3, \"approvedCount\": 1, \"declinedCount\": 1, \"pendingCount\": 1, \"approvedAmountMinor\": 100}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "header-only",
+      "passed": true,
+      "exit_code": 0,
+      "stdout": "{\"totalCount\": 0, \"approvedCount\": 0, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 0}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "zero-leading",
+      "passed": true,
+      "exit_code": 0,
+      "stdout": "{\"totalCount\": 2, \"approvedCount\": 2, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 1}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "crlf",
+      "passed": true,
+      "exit_code": 0,
+      "stdout": "{\"totalCount\": 1, \"approvedCount\": 1, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 100}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "quoted",
+      "passed": true,
+      "exit_code": 0,
+      "stdout": "{\"totalCount\": 1, \"approvedCount\": 1, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 100}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "threshold",
+      "passed": true,
+      "exit_code": 0,
+      "stdout": "{\"totalCount\": 4, \"approvedCount\": 4, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 300}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "empty",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "wrong-header",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "bom",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "lowercase",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "negative",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "plus",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "decimal",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "space",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "unicode-digit",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "empty-amount",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "missing-field",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "extra-field",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "blank-record",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "invalid-utf8",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "late-invalid",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "missing-file",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "directory",
+      "passed": true,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "INVALID_INPUT\r\n"
+    },
+    {
+      "name": "single-pass-contract",
+      "passed": true,
+      "stderr": ""
+    },
+    {
+      "name": "memory-budget",
+      "passed": true,
+      "delta_bytes": 7545
+    }
+  ],
+  "measurements": [
+    {
+      "peak_bytes": 982972,
+      "elapsed_seconds": 0.027012499995180406,
+      "records": 1000,
+      "output_correct": true
+    },
+    {
+      "peak_bytes": 990517,
+      "elapsed_seconds": 1.2120223000092665,
+      "records": 200000,
+      "output_correct": true
+    }
+  ],
+  "passed": true
+}

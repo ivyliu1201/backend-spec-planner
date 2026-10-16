@@ -1,0 +1,654 @@
+{
+  "recorded_at_utc": "2026-10-16T08:03:21.954101+00:00",
+  "purpose": "Replay archived programs and check persistence; no new model generation.",
+  "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "archive": "../evidence/2026-10-16-redesign.zip",
+  "archive_sha256": "3c29ed41307634b40f81851b05d88dbd9456ec90838f28cc5052f79c40be8710",
+  "verification_script_sha256": "b2f82aeabba67233ff3ceb61835ec1310b1a1a169929f7c9495d20cf238f8e60",
+  "commands": [
+    "python -m zipfile -e evals/evidence/2026-10-16-redesign.zip evals/.runs/redesign-06016613b1fa4a67aa38de24ac19a4c1",
+    "python -B evals/.runs/redesign-06016613b1fa4a67aa38de24ac19a4c1/evaluate.py evals/.runs/redesign-06016613b1fa4a67aa38de24ac19a4c1/implementation/original-baseline",
+    "python -B evals/.runs/redesign-06016613b1fa4a67aa38de24ac19a4c1/evaluate.py evals/.runs/redesign-06016613b1fa4a67aa38de24ac19a4c1/implementation --changed",
+    "python -B evals/.runs/redesign-06016613b1fa4a67aa38de24ac19a4c1/evaluate.py evals/.runs/redesign-06016613b1fa4a67aa38de24ac19a4c1/implementation/original-baseline --changed",
+    "python -B evals/verify.py"
+  ],
+  "replays": {
+    "original": {
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "report": {
+        "project": "C:\\ivy\\code\\backend-spec-planner\\evals\\.runs\\redesign-06016613b1fa4a67aa38de24ac19a4c1\\implementation\\original-baseline",
+        "changed": false,
+        "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "checks": [
+          {
+            "name": "mixed",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 3, \"approvedCount\": 1, \"declinedCount\": 1, \"pendingCount\": 1, \"approvedAmountMinor\": 100}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "header-only",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 0, \"approvedCount\": 0, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 0}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "zero-leading",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 2, \"approvedCount\": 2, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 1}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "crlf",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 1, \"approvedCount\": 1, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 100}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "quoted",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 1, \"approvedCount\": 1, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 100}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "threshold",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 4, \"approvedCount\": 4, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 300}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "empty",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "wrong-header",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "bom",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "lowercase",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "negative",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "plus",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "decimal",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "space",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "unicode-digit",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "empty-amount",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "missing-field",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "extra-field",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "blank-record",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "invalid-utf8",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "late-invalid",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "missing-file",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "directory",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "single-pass-contract",
+            "passed": true,
+            "stderr": ""
+          },
+          {
+            "name": "memory-budget",
+            "passed": true,
+            "delta_bytes": 7547
+          }
+        ],
+        "measurements": [
+          {
+            "peak_bytes": 983389,
+            "elapsed_seconds": 0.04123789998993743,
+            "records": 1000,
+            "output_correct": true
+          },
+          {
+            "peak_bytes": 990936,
+            "elapsed_seconds": 1.3318924000050174,
+            "records": 200000,
+            "output_correct": true
+          }
+        ],
+        "passed": true
+      }
+    },
+    "changed": {
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "report": {
+        "project": "C:\\ivy\\code\\backend-spec-planner\\evals\\.runs\\redesign-06016613b1fa4a67aa38de24ac19a4c1\\implementation",
+        "changed": true,
+        "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "checks": [
+          {
+            "name": "mixed",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 3, \"approvedCount\": 1, \"declinedCount\": 1, \"pendingCount\": 1, \"approvedAmountMinor\": 100}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "header-only",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 0, \"approvedCount\": 0, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 0}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "zero-leading",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 2, \"approvedCount\": 2, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 0}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "crlf",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 1, \"approvedCount\": 1, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 100}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "quoted",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 1, \"approvedCount\": 1, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 100}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "threshold",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 4, \"approvedCount\": 4, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 201}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "empty",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "wrong-header",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "bom",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "lowercase",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "negative",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "plus",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "decimal",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "space",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "unicode-digit",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "empty-amount",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "missing-field",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "extra-field",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "blank-record",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "invalid-utf8",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "late-invalid",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "missing-file",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "directory",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "single-pass-contract",
+            "passed": true,
+            "stderr": ""
+          },
+          {
+            "name": "memory-budget",
+            "passed": true,
+            "delta_bytes": 7319
+          }
+        ],
+        "measurements": [
+          {
+            "peak_bytes": 983279,
+            "elapsed_seconds": 0.032330000001820736,
+            "records": 1000,
+            "output_correct": true
+          },
+          {
+            "peak_bytes": 990598,
+            "elapsed_seconds": 1.3289742000051774,
+            "records": 200000,
+            "output_correct": true
+          }
+        ],
+        "passed": true
+      }
+    },
+    "negative": {
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "report": {
+        "project": "C:\\ivy\\code\\backend-spec-planner\\evals\\.runs\\redesign-06016613b1fa4a67aa38de24ac19a4c1\\implementation\\original-baseline",
+        "changed": true,
+        "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "checks": [
+          {
+            "name": "mixed",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 3, \"approvedCount\": 1, \"declinedCount\": 1, \"pendingCount\": 1, \"approvedAmountMinor\": 100}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "header-only",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 0, \"approvedCount\": 0, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 0}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "zero-leading",
+            "passed": false,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 2, \"approvedCount\": 2, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 1}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "crlf",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 1, \"approvedCount\": 1, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 100}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "quoted",
+            "passed": true,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 1, \"approvedCount\": 1, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 100}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "threshold",
+            "passed": false,
+            "exit_code": 0,
+            "stdout": "{\"totalCount\": 4, \"approvedCount\": 4, \"declinedCount\": 0, \"pendingCount\": 0, \"approvedAmountMinor\": 300}\r\n",
+            "stderr": ""
+          },
+          {
+            "name": "empty",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "wrong-header",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "bom",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "lowercase",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "negative",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "plus",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "decimal",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "space",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "unicode-digit",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "empty-amount",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "missing-field",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "extra-field",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "blank-record",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "invalid-utf8",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "late-invalid",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "missing-file",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "directory",
+            "passed": true,
+            "exit_code": 2,
+            "stdout": "",
+            "stderr": "INVALID_INPUT\r\n"
+          },
+          {
+            "name": "single-pass-contract",
+            "passed": true,
+            "stderr": ""
+          },
+          {
+            "name": "memory-budget",
+            "passed": true,
+            "delta_bytes": 7484
+          }
+        ],
+        "measurements": [
+          {
+            "peak_bytes": 983401,
+            "elapsed_seconds": 0.028087899991078302,
+            "records": 1000,
+            "output_correct": true
+          },
+          {
+            "peak_bytes": 990885,
+            "elapsed_seconds": 1.1037313999986509,
+            "records": 200000,
+            "output_correct": true
+          }
+        ],
+        "passed": false
+      }
+    }
+  },
+  "document_negative_checks": {
+    "baseline": {
+      "documents": 16,
+      "local_links": 79,
+      "cases": 27,
+      "archived_files": 74,
+      "reports": 2,
+      "errors": [],
+      "passed": true
+    },
+    "broken_link": {
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "result": {
+        "documents": 16,
+        "local_links": 80,
+        "cases": 27,
+        "archived_files": 74,
+        "reports": 2,
+        "errors": [
+          "README.md: missing missing-verification-target.md"
+        ],
+        "passed": false
+      }
+    },
+    "changed_evidence": {
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "result": {
+        "documents": 16,
+        "local_links": 79,
+        "cases": 27,
+        "archived_files": 74,
+        "reports": 2,
+        "errors": [
+          "evals\\results\\2026-10-16-original.json: SHA-256 mismatch"
+        ],
+        "passed": false
+      }
+    }
+  },
+  "passed": true
+}
